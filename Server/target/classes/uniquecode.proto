@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package uniquecode;
+option java_package = "com.tiket.banktransfer.grpc";
+
+service UniqueCodeService {
+	rpc HealthCheck(HealthCheckRequest) returns (HealthCheckResponse) {}
+}
+
+message HealthCheckRequest {}
+
+message HealthCheckResponse {
+	string status = 1;
+}
